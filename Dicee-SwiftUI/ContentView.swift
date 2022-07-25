@@ -29,6 +29,17 @@ struct ContentView: View {
                         .padding()
                 }
                 .padding(.horizontal)
+                
+                Button {
+                    // Button action
+                } label: {
+                    Text("Roll")
+                        .font(.system(size: 50))
+                        .fontWeight(.heavy)
+                        .foregroundColor(.white)
+                        .padding(.horizontal, 30)
+                }
+                .background(.red, ignoresSafeAreaEdges: [])
             }
         }
     }
