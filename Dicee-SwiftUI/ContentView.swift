@@ -22,20 +22,13 @@ struct ContentView: View {
             VStack {
                 Image("diceeLogo")
                 Spacer()
-                
                 HStack {
-                    Image("dice\(leftDiceNumber)")
-                        .resizable()
-                        .aspectRatio(1, contentMode: .fit)
-                        .padding()
-                    Image("dice\(rightDiceNumber)")
-                        .resizable()
-                        .aspectRatio(1, contentMode: .fit)
-                        .padding()
+                    DiceView(n: leftDiceNumber)
+                    DiceView(n: rightDiceNumber)
                 }
                 .padding(.horizontal)
-                Spacer()
                 
+                Spacer()
                 Button {
                     self.leftDiceNumber = Int.random(in: 1...6)
                     self.rightDiceNumber = Int.random(in: 1...6)
@@ -51,6 +44,18 @@ struct ContentView: View {
                 Spacer()
             }
         }
+    }
+}
+
+struct DiceView: View {
+    
+    let n: Int
+    
+    var body: some View {
+        Image("dice\(n)")
+            .resizable()
+            .aspectRatio(1, contentMode: .fit)
+            .padding()
     }
 }
 
