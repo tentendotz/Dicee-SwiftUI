@@ -17,6 +17,7 @@ struct ContentView: View {
             
             VStack {
                 Image("diceeLogo")
+                Spacer()
                 
                 HStack {
                     Image("dice1")
@@ -29,6 +30,7 @@ struct ContentView: View {
                         .padding()
                 }
                 .padding(.horizontal)
+                Spacer()
                 
                 Button {
                     // Button action
@@ -40,6 +42,8 @@ struct ContentView: View {
                         .padding(.horizontal, 30)
                 }
                 .background(.red, ignoresSafeAreaEdges: [])
+                
+                Spacer()
             }
         }
     }
